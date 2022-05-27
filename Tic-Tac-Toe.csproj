@@ -6,6 +6,10 @@
     <RootNamespace>Tic_Tac_Toe</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <StartupObject>Tic_Tac_Toe.App</StartupObject>
+    
   </PropertyGroup>
+
+ 
 
 </Project>
