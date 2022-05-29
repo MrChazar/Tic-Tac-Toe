@@ -4,12 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Tic-Tac-Toe" Height="600" Width="600" ResizeMode="NoResize">
+        Title="Tic-Tac-Toe" Height="700" Width="700" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="0.25*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -25,5 +26,9 @@
         <Button x:Name="Button_0_2" Click="Button_Click" Grid.Row="0" Grid.Column="2" />
         <Button x:Name="Button_1_2" Click="Button_Click" Grid.Row="1" Grid.Column="2" />
         <Button x:Name="Button_2_2" Click="Button_Click" Grid.Row="2" Grid.Column="2" />
+        <TextBlock x:Name="Player1" Margin="10,0,115,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Height="23" TextAlignment="Center" FontFamily="Arial Black" FontSize="14"><Run Text="Player "/><Run Language="pl-pl" Text="1"/><Run Text=": "/></TextBlock>
+        <TextBlock x:Name="Player1Score" Margin="104,0,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Height="23" TextAlignment="Center" FontFamily="Arial Black" FontSize="14" HorizontalAlignment="Left"><Run Language="pl-pl" Text="0"/><Run Text=" "/></TextBlock>
+        <TextBlock x:Name="Player2" Margin="115,0,10,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Height="23" TextAlignment="Center" FontFamily="Arial Black" FontSize="14" Grid.Column="2"><Run Text="Player "/><Run Language="pl-pl" Text="2"/><Run Text=": "/></TextBlock>
+        <TextBlock x:Name="Player2Score" Margin="209,0,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Height="23" TextAlignment="Center" FontFamily="Arial Black" FontSize="14" HorizontalAlignment="Left" Grid.Column="2"><Run Language="pl-pl" Text="0"/><Run Text=" "/></TextBlock>
     </Grid>
 </Window>

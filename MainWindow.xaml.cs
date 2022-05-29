@@ -22,9 +22,13 @@ namespace Tic_Tac_Toe
     {
         public bool IsPlayer1Turn { get; set; }
         public int Counter { get; set; }
+
+        public int WPlayer1Score = 0;
+        public int WPlayer2Score = 0;
         public MainWindow()
         {
             InitializeComponent();
+
             NewGame();
         }
         public void NewGame() 
@@ -50,22 +54,30 @@ namespace Tic_Tac_Toe
             }
             if (CheckIfPlayerWon())
             {
+                
                 Counter = 9;
                 
             }
         }
-        private bool CheckIfPlayerWon() 
+        private bool CheckIfPlayerWon()
         {
-            /* if (ButtonTable[0][0].Content = 'O') 
-             {
-                 ButtonTable[0][0].Background = Brushes.Red;
-             } */
-            /* Kolumny */
-            if (Button_0_0.Content != String.Empty && Button_0_0.Content == Button_1_0.Content && Button_1_0.Content == Button_2_0.Content) 
+            if (Button_0_0.Content != String.Empty && Button_0_0.Content == Button_1_0.Content && Button_1_0.Content == Button_2_0.Content)
             {
                 Button_0_0.Background = Brushes.Green;
                 Button_1_0.Background = Brushes.Green;
                 Button_2_0.Background = Brushes.Green;
+                if (Button_0_0.Content == "O") 
+                {
+                    WPlayer1Score += 1;
+                    string v = Convert.ToString(WPlayer1Score);
+                    Player1Score.Text = v;
+                }
+                else 
+                {
+                    WPlayer2Score += 1;
+                    string v = Convert.ToString(WPlayer2Score);
+                    Player2Score.Text = v;
+                }
                 return true;
             }
             if (Button_0_1.Content != String.Empty && Button_0_1.Content == Button_1_1.Content && Button_1_1.Content == Button_2_1.Content)
@@ -73,25 +85,139 @@ namespace Tic_Tac_Toe
                 Button_0_1.Background = Brushes.Green;
                 Button_1_1.Background = Brushes.Green;
                 Button_2_1.Background = Brushes.Green;
+                if (Button_0_1.Content == "O")
+                {
+                    WPlayer1Score += 1;
+                    string v = Convert.ToString(WPlayer1Score);
+                    Player1Score.Text = v;
+                }
+                else
+                {
+                    WPlayer2Score += 1;
+                    string v = Convert.ToString(WPlayer2Score);
+                    Player2Score.Text = v;
+                }
                 return true;
             }
-            if (Button_0_2.Content != String.Empty &&  Button_0_2.Content == Button_1_2.Content && Button_1_2.Content == Button_2_2.Content)
+            if (Button_0_2.Content != String.Empty && Button_0_2.Content == Button_1_2.Content && Button_1_2.Content == Button_2_2.Content)
             {
                 Button_0_2.Background = Brushes.Green;
                 Button_1_2.Background = Brushes.Green;
                 Button_2_2.Background = Brushes.Green;
+                if (Button_0_2.Content == "O")
+                {
+                    WPlayer1Score += 1;
+                    string v = Convert.ToString(WPlayer1Score);
+                    Player1Score.Text = v;
+                }
+                else
+                {
+                    WPlayer2Score += 1;
+                    string v = Convert.ToString(WPlayer2Score);
+                    Player2Score.Text = v;
+                }
                 return true;
             }
             /* Wiersze */
-            if (Button_0_0.Content != String.Empty && Button_0_0 == Button_0_1 && Button_0_1 == Button_0_2) 
+            if (Button_0_0.Content != String.Empty && Button_0_0.Content == Button_0_1.Content && Button_0_1.Content == Button_0_2.Content)
             {
                 Button_0_0.Background = Brushes.Green;
                 Button_0_1.Background = Brushes.Green;
-
+                Button_0_2.Background = Brushes.Green;
+                if (Button_0_0.Content == "O")
+                {
+                    WPlayer1Score += 1;
+                    string v = Convert.ToString(WPlayer1Score);
+                    Player1Score.Text = v;
+                }
+                else
+                {
+                    WPlayer2Score += 1;
+                    string v = Convert.ToString(WPlayer2Score);
+                    Player2Score.Text = v;
+                }
+                return true;
             }
-            
+            if (Button_1_0.Content != String.Empty && Button_1_0.Content == Button_1_1.Content && Button_1_1.Content == Button_1_2.Content)
+            {
+                Button_1_0.Background = Brushes.Green;
+                Button_1_1.Background = Brushes.Green;
+                Button_1_2.Background = Brushes.Green;
+                if (Button_1_0.Content == "O")
+                {
+                    WPlayer1Score += 1;
+                    string v = Convert.ToString(WPlayer1Score);
+                    Player1Score.Text = v;
+                }
+                else
+                {
+                    WPlayer2Score += 1;
+                    string v = Convert.ToString(WPlayer2Score);
+                    Player2Score.Text = v;
+                }
+                return true;
+            }
+            if (Button_2_0.Content != String.Empty && Button_2_0.Content == Button_2_1.Content && Button_2_1.Content == Button_2_2.Content)
+            {
+                Button_2_0.Background = Brushes.Green;
+                Button_2_1.Background = Brushes.Green;
+                Button_2_2.Background = Brushes.Green;
+                if (Button_2_0.Content == "O")
+                {
+                    WPlayer1Score += 1;
+                    string v = Convert.ToString(WPlayer1Score);
+                    Player1Score.Text = v;
+                }
+                else
+                {
+                    WPlayer2Score += 1;
+                    string v = Convert.ToString(WPlayer2Score);
+                    Player2Score.Text = v;
+                }
+                return true;
+            }
+            /* Na skos */
+            if (Button_0_0.Content != String.Empty && Button_0_0.Content == Button_1_1.Content && Button_1_1.Content == Button_2_2.Content)
+            {
+                Button_0_0.Background = Brushes.Green;
+                Button_1_1.Background = Brushes.Green;
+                Button_2_2.Background = Brushes.Green;
+                if (Button_0_0.Content == "O")
+                {
+                    WPlayer1Score += 1;
+                    string v = Convert.ToString(WPlayer1Score);
+                    Player1Score.Text = v;
+                }
+                else
+                {
+                    WPlayer2Score += 1;
+                    string v = Convert.ToString(WPlayer2Score);
+                    Player2Score.Text = v;
+                }
+                return true;
+            }
+            if (Button_0_2.Content != String.Empty && Button_1_1.Content == Button_2_0.Content && Button_2_0.Content == Button_0_2.Content)
+            {
+                Button_0_2.Background = Brushes.Green;
+                Button_1_1.Background = Brushes.Green;
+                Button_2_0.Background = Brushes.Green;
+                if (Button_0_2.Content == "O")
+                {
+                    WPlayer1Score += 1;
+                    string v = Convert.ToString(WPlayer1Score);
+                    Player1Score.Text = v;
+                }
+                else
+                {
+                    WPlayer2Score += 1;
+                    string v = Convert.ToString(WPlayer2Score);
+                    Player2Score.Text = v;
+                }
+                return true;
+            }
             return false;
         }
+
         public void ResetTiles() 
         {
             Button_0_0.Content = string.Empty;
